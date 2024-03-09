@@ -14,17 +14,25 @@ body {
   max-width: 1440px;
   display: flex;
 }
-ul {list-style-type: none;
+
+ul {
+  list-style-type: none;
   display: flex;
-	margin-top: 0;
-	margin-bottom: 0;
-	flex-wrap: wrap;
-	gap: 24px;
-  
-	}
-  img{display: block;
-    height: auto;  
-    width: 360px;       
-    object-fit:cover;    
-  }
-  
+  margin: 0;
+  padding: 0;
+  flex-wrap: wrap;
+  justify-content: space-between; /* Додаємо простір між елементами в рядку */
+  gap: 24px;
+}
+
+li {
+  flex: 0 0 calc(33.33% - 16px); /* Розмір елементів у рядку */
+  margin-bottom: 24px; /* Простір між рядками */
+}
+
+img {
+  display: block;
+  height: auto;
+  width: 100%;
+  object-fit: cover;
+}
